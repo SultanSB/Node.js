@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sightings-app
+    ports:
+      - "8000:8000"
+    environment:
+      - NODE_ENV=production
+      - PUBLIC_PATH=/app/public # Add if your app expects this
